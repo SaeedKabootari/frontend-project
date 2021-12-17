@@ -36,9 +36,11 @@ body{
 .haedingbox .chevronleft{
     font-size: 39px;
     font-weight: 300;  
+    cursor: pointer;
 }
 .haedingbox .threedots{
     font-size: 39px;
+    cursor: pointer;
 }
 .profileinfo{
     display: flex;
@@ -100,6 +102,7 @@ body{
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     font-size: 20px;
+    cursor: pointer;
 }
 .buttonsbox .button:last-child{
     border: 3px solid #E3E3E3;
@@ -116,5 +119,6 @@ body{
     -ms-border-radius: 10px;
     -o-border-radius: 10px;   
     font-size: 20px;     
+    cursor: pointer;
 }
 
