@@ -1,8 +1,8 @@
-const threedotsButton = document.querySelector('.threedots');
-const chevronleftButton = document.querySelector('.chevronleft');
-const followButton = document.querySelector('#followbutton');
-const messageButton = document.querySelector('#messagebutton');
-const angledownButton = document.querySelector('#angledownbutton');
+const threedotsButton = document.querySelector('#threedots-button');
+const chevronleftButton = document.querySelector('#chevron-left-button');
+const followButton = document.querySelector('#follow-button');
+const messageButton = document.querySelector('#message-button');
+const angledownButton = document.querySelector('#angle-down-button');
 
 threedotsButton.addEventListener('click' , () => console.log('threedotsButton clicked'));
 chevronleftButton.addEventListener('click' , () => console.log('chevronleftButton clicked'));

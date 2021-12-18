@@ -22,41 +22,41 @@ body{
     padding: 55px;
     background-color: #fff;    
 }
-.haedingbox{
+.haeding-box{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.haedingbox .haeding{
+.haeding-box .haeding{
     display: flex;
     align-items: center;
 }
-.haedingbox .haeding h2{
+.haeding-box .haeding h2{
     margin-right: 10px;   
 }
-.haedingbox .chevronleft{
+.haeding-box .chevron-left{
     font-size: 39px;
     font-weight: 300;  
     cursor: pointer;
 }
-.haedingbox .threedots{
+.haeding-box .threedots{
     font-size: 39px;
     cursor: pointer;
 }
-.profileinfo{
+.profile-info{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
 }
-.profileinfo .profilenumbers{
+.profile-info .profile-numbers{
     line-height: 90%;
 }
-.profileinfo .profilenumbers ul li span{
+.profile-info .profile-numbers ul li span{
     font-size: 20px;   
 }
-.profilewrap{
+.profile-wrap{
     width: 160px;
     height: 160px;
     border: 3px solid orange;
@@ -67,33 +67,33 @@ body{
     -o-border-radius: 50%;
     overflow: hidden;
 }
-.profilewrap img{
+.profile-wrap img{
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
-.profilenumbers ul li{
+.profile-numbers ul li{
     list-style: none;
     margin-left: 185px;
     display: inline-block;
     text-align: center;
 }
-.biobox{
+.bio-box{
     margin-top: 50px;
     font-size: 20px;
 }
-.biobox a{
+.bio-box a{
     color: #374555;
     text-decoration: none;
     font-size: 20px;
 }
-.buttonsbox{
+.buttons-box{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 50px;
 }
-.buttonsbox .button{
+.buttons-box .button{
     padding: 25px 180px;
     background-color: #fff;
     border: 3px solid #E3E3E3;
@@ -105,11 +105,11 @@ body{
     font-size: 20px;
     cursor: pointer;
 }
-.buttonsbox .button:last-child{
+.buttons-box .button:last-child{
     border: 3px solid #E3E3E3;
     padding: 25px 40px;
 }
-.bluebutton{ 
+.blue-button{ 
     padding: 25px 180px;
     background-color: #0094F6;
     color: #fff; 
