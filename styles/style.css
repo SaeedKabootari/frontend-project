@@ -1,3 +1,7 @@
+:root{
+    --button-bg-color : #0094F6;
+    --border-color : #E3E3E3;
+}
 @font-face {
     font-family: 'vazir';
     src: url('../fonts/Vazir.eot');
@@ -13,7 +17,7 @@ body{
     font-family: 'vazir';
     display: flex; 
     flex-direction: column;
-    background-color: #E3E3E3;
+    background-color: var(--border-color);
 }
 .container{
     width: 1180px;
@@ -96,7 +100,7 @@ body{
 .buttons-box .button{
     padding: 25px 180px;
     background-color: #fff;
-    border: 3px solid #E3E3E3;
+    border: 3px solid var(--border-color);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -106,14 +110,14 @@ body{
     cursor: pointer;
 }
 .buttons-box .button:last-child{
-    border: 3px solid #E3E3E3;
+    border: 3px solid var(--border-color);
     padding: 25px 40px;
 }
 .blue-button{ 
     padding: 25px 180px;
-    background-color: #0094F6;
+    background-color : var(--button-bg-color);
     color: #fff; 
-    border: 3px solid #0094F6;
+    border: 3px solid var(--button-bg-color);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
