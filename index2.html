@@ -22,18 +22,8 @@
         const haedingBox = React.createElement('div', { className: 'heading-box' },);
         const profileInfo = React.createElement('div', { className: 'profile-info' },);
         const profileNumbers = React.createElement('div', { className: 'profile-numbers' },);
-        const bioBox = React.createElement('div', { className: 'bio-box' },);
-
-        function $(a,b,c){
-            return React.createElement(`${a}`,{},
-            React.createElement(`${b}`,{},`${c}`),
-            React.createElement(`${b}`,{},`${c}`),
-            React.createElement(`${b}`,{},`${c}`),
-
-            );
-        }
-
-        function $(parentTagName,parentClass,childTagName1,childTagName2,childTagName3,childContent1,childContent2,childContent3){
+    
+        function bioBox(parentTagName,parentClass,childTagName1,childTagName2,childTagName3,childContent1,childContent2,childContent3){
             return React.createElement(`${parentTagName}`,{className : `${parentClass}`},
             React.createElement(`${childTagName1}`,{},`${childContent1}`),
             React.createElement(`${childTagName2}`,{},`${childContent2}`),
@@ -50,7 +40,7 @@
             haedingBox,
             profileInfo,
             profileNumbers,
-            $('div','bio-box','h3', 'p' ,'a','Instagram','Bringing you closer to the people and things you love.🧡'
+            bioBox('div','bio-box','h3', 'p' ,'a','Instagram','Bringing you closer to the people and things you love.🧡'
             ,'www.facebook.com/covidssupport'),    
         );
 
