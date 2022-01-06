@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+    <script type="text/babel">
+
+        ////////////////////////////////////////
+        //Cats Component 
+        const Cats = ({ listItemGenerator }) => {
+            const [cat, setCat] = React.useState([]);
+            const [trigger, setTrigger] = React.useState(false);
+            React.useEffect(() => {
+                fetch('https://cataas.com/cat?json=true')
+                    .then(response => response.json())
+                    .then(json => setCat([...cat, json]))
+            }, [trigger]);
+            console.log(cat);
+            return (
+                <div>
+                    <button className="fancy-button" onClick={() => { setTrigger(!trigger) }}><p>CatAdder</p></button>
+                    {cat.map((item, index) => listItemGenerator(item, index))}
+                </div>
+            )
+        }
+        //Cats PropTypes
+        Cats.propTypes = {
+            listItemGenerator: PropTypes.func
+        };
+
+        ////////////////////////////////////////
+        //listFancyGenerator function
+        const listFancyGenerator = (item, index) => {
+            let red = Math.floor(255 * Math.random());
+            let blue = Math.floor(255 * Math.random());
+            let green = Math.floor(255 * Math.random());
+            let color = `rgb(${red} , ${green} , ${blue})`;
+            return (<div key={item.id} style={{ display: 'inline-block' }}>
+                <img className="cat-img" style={{ width: '150' }, { height: '150' }, { borderColor: `${color}` }} src={`https://cataas.com${item.url}`} />
+            </div>)
+        }
+
+        ////////////////////////////////////////
+        //App Component 
+        const App = () => {
+            return (
+                <>
+                    <div className="heading">
+                        <p>🐱Cats World</p>
+                    </div>
+                    <div className="container">
+                        <Cats listItemGenerator={listFancyGenerator} />
+                    </div>
+                </>
+            )
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
