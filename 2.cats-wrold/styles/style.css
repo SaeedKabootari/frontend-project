@@ -56,3 +56,42 @@
     animation: bounce; 
     animation-duration: 2s;
 }
+/* Landing Page Styles */
+.loading{
+    background-color: #e7dfdd;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.loading-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+}
+.loading-cat-img{
+    display: block;
+    width: 640px;
+    height: 480px;   
+}
+.loading-button{
+    display: block;
+    padding-right: 15px;
+    padding-left: 15px;    
+    font-size:40px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    background: linear-gradient(0deg, rgba(38,219,84,1) 0%, rgba(238,49,196,1) 35%, rgba(246,247,36,1) 100%);
+    cursor: pointer;
+    opacity: .8;
+}
+.loading-button:hover{
+    opacity: 1;
+}
+
+
